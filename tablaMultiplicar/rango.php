@@ -18,6 +18,7 @@ foreach ($array as $index => $value)
     }
 }
 $noRepetido=array_unique($array);
+asort($noRepetido);//Ordena array de menor a mayor.
 ?> 
 <!DOCTYPE html>
 
@@ -31,13 +32,12 @@ $noRepetido=array_unique($array);
         </style>
     </head>
     <body>        
-        <?php              
-        foreach ($noRepetido as $value) {//Recorre array hasta el final.?>       
+        <?php foreach ($noRepetido as $valor) {//Recorre array hasta el final.?>       
             <br>
             <?php for($multiplicador=1;$multiplicador<=9;$multiplicador++){//Incrementa multiplicador y para en 9.?>
             <table border="1">
                 <tr >
-                    <td class=bg1><?php echo $value ?></td> 
+                    <td class=bg1><?php echo $valor ?></td> 
                     <td class=bg2>X</td>
                     <td class=bg1><?php echo $multiplicador ?></td>
                     <td class=bg2>=</td>           
